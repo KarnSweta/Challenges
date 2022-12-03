@@ -1,4 +1,4 @@
-a function where you pass in the object and a key and get back the value.
+a function where you pass in the object and a key and get back the value.<br />
 TEST CASES:
   TEST CASE 1:
     INPUT 1:
