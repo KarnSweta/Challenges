@@ -1,1 +1,18 @@
-
+---
+- hosts: localhost
+  gather_facts: true
+  tasks:
+    - ec2_metadata_facts:
+      register: facts
+    - name: set var
+      set_fact:
+        facts_var: "{{ facts.ansible_facts }}"
+    - name: print
+      debug:
+        msg: "{{ facts.ansible_facts }}"
+    - name: get specific value
+      set_fact:
+        value: "{{ facts.ansible_facts | json_query('ansible_ec2_ami_id') }}"
+    - name: Print value
+      debug:
+        msg: "value= {{value}}"

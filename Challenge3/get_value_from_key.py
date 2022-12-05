@@ -1,23 +1,20 @@
 import json
-#Enter any object of your choice
-object = {"x":{"y":{"z":"a"}}}
-#Enter the key whose value you need to find out
-find_key = 'y'
+obj = {"x":{"y":{"z":"a"}},"b":{"c":{"d":"e"}}} #Enter any object of your choice
+find_key = 'x' #Enter any key whose value is needed
+arr = []  
 
-def mapnew(object, find_key): 
-    fetched_value = {}
-    if isinstance(object,dict):
-        for key, value in object.items():            
-            if key == find_key:               
-                fetched_value = json.dumps(value)
-                return fetched_value
-        return mapnew(value, find_key)
-    else:
-        return 'key missing'
-        
+def fetch_value(obj, arr, find_key):     
+    if isinstance(obj, dict):            
+        for key, value in obj.items():
+           if key == find_key:
+               arr.append(value)
+           elif isinstance(value, dict):
+               fetch_value(value, arr, find_key)
+    return arr
+
 if __name__ == '__main__':
-    if object:
-        key_value = mapnew(object, find_key)
-        print(key_value)
+    values = fetch_value(obj, arr, find_key)
+    if values == []:
+        print('Key missing')
     else:
-        print('The object passed is empty')
+        print(json.dumps(values[0]))
