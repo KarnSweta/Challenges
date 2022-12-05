@@ -2,6 +2,7 @@
 
 Challenge1:<br>
 A 3-tier environment is a common setup. Use a tool of your choosing/familiarity create these resources on a cloud environment (Azure/AWS/GCP).<br>
+write infra code using Terraform which should essentially contain code to create AWS services to host a typical 3-tier architecture application. Basically create a platform to host the application using any IaC tool of your choice.<br>
 <br>
 Challenge2:<br>
 We need to write code that will query the meta data of an instance within AWS or Azure or GCP and provide a json formatted output.<br>
