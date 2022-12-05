@@ -6,16 +6,16 @@ Here in the code I have added simple ec2 instance for front end and backend, but
 <img width="428" alt="image" src="https://user-images.githubusercontent.com/119726781/205720885-b09a172e-3b11-469a-b7a6-5f3105569286.png">
 
 
-The repository consists of modules for some of the resources that could be reused while creating resources for other environments.
+The repository consists of terraform modules for some of the resources that could be reused while creating resources for other environments.
 The modules are for creating - 
 1. ec2
 2. db instance
 3. networking - VPC, subnets, internet gateway, nat gateway, route tables
 
-The env consists fo demo env which is being created for this demo. 
-The demo env consists of creating 
+The env dir consists of demo env which is being created for this demo.
+The demo env consists of 
 1. network which will consist of VPC, public subnet, private subnet, internet gateway, nat gateway and route tables.
-2. Creating security groups for frontend, application and database.
-3. creating loadbalancer and target groups.
-4. creating ec2 server for frontend and application.
-5. creating database - database username and password are passed as sensitive variables. They can be stored in jenkins credentials or can be stored in an encrypted file and can be passed as variable while running the teraform command. Can also be secured using hashicorp vault.
+2. security groups for frontend, application and database.
+3. loadbalancer and target groups.
+4. ec2 server for frontend and application.
+5. database - database username and password are passed as sensitive variables. They can be stored in jenkins credentials or can be stored in an encrypted file and can be passed as variable while running the teraform command. Can also be secured using hashicorp vault.
