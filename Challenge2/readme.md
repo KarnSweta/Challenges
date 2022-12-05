@@ -1,7 +1,7 @@
-get_ec2_metadata.py - 1. gets the metadata of the current ec2 instance in json format.
-                      2. Asks for input of a key whose metadata data value is needed and returns the value as output.
+get_ec2_metadata.py -<br> 1. gets the metadata of the current ec2 instance in json format.
+                      2. Asks for input of a key whose metadata data value is needed and returns the value as output. <br>
 
-TEST RESULTS :
+TEST RESULTS :<br>
 {
     "meta-data": {
         "ami-id": "ami-08c40ec9ead489470",
@@ -97,8 +97,8 @@ TEST RESULTS :
     }
 }
 
-Enter the key:ami-id
-value is --------------------------------------------------------------
+Enter the key:ami-id <br>
+value is -------------------------------------------------------------- <br>
 "ami-08c40ec9ead489470"
 
 
@@ -108,9 +108,9 @@ value is --------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 get_ec2_metadata.yaml - ansible playbook that gathers and returns ec2 metadata facts of any ec2 instance listed in inventory.
-Can also query the value of a key in the metadata response. 
+Can also query the value of a key in the metadata response. <br>
 
-TEST RESULTS:
+TEST RESULTS: <br>
 
 PLAY [localhost] ********************************************************************************************************************************************
 
